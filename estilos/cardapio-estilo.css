@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #5b3222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+  }
+
+  .menu{
+      color: #E2CEB2;
+      font-family: 'Pacifico';
+      
+      
+      
+  }
+  header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;   
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    color: white;
+  }
+
+  .swiper-pagination-bullet-active{
+    background: white;
+  }
+ 
+ .card-content{
+  margin-top: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+.expresso, .capuccino, .americano, .latte, .frappe, .moccha{
+  border-radius: 10px;
+}
+
+  footer{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to top, #b67315, #a2601e, #8c4f22, #744023, #5b3222);
+    box-sizing: border-box;
+    bottom: 0;
+    margin-top: auto;
+    opacity: 0.4;
+    width: 100%;
+
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+}
+  .logo{
+      color: #E2CEB2;
+  }
+  li{
+      list-style: none;
+      
+  }
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    color: #E2CEB2;
+    font-size: 16px;
+    font-family: 'Arvo';
+  }
+
+  a{
+    text-decoration: none;
+    color: #E2CEB2;
+  }
+  .marca{
+    color: #b67315;
+    font-family:'Pacifico';
+    font-size: 80px;
+    
+  }
+
+  .text{
+    color: #E2CEB2;
+    font-family:'Arvo';
+    font-size: 120%;
+  }
+
+
+  a {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: #b67315;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #b67315;
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
